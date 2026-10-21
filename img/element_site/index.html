@@ -1,0 +1,31 @@
+<? xml version="1.0" encoding="windows-1251"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>window.RufflePlayer = {config: {autoplay: "on", unmuteOverlay: "hidden", splashScreen: false}};</script><script src="../../ruffle/ruffle.js"></script><script>Object.defineProperty(window, "devicePixelRatio", {get: function () { return 1; }});</script>
+	
+	<title>Элемент — магазин модной одежды и обуви</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+<style>html, body, #flashcontent {height: 100%; margin: 0; overflow: hidden}</style></head>
+<body>
+	<div id="flashcontent"></div>	
+	<script src="swfobject.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var so = new SWFObject("element.swf","mymovie","100%","100%","9","#ffffff");
+		so.addParam("quality", "high");
+		//so.addParam("wmode", "transparent");
+		so.addVariable("mainXMLName", "everything.aspx");
+		so.addVariable("photoXMLName", "photo_xml/");
+		so.addVariable("XMLExtention", ".aspx");
+		so.addVariable("newsXMLName", "news_xml/");
+		
+		so.addVariable("commenterName", "")
+		
+		so.write("flashcontent");
+	</script>
+</body>
+</html>

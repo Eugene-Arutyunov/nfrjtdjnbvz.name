@@ -1,0 +1,126 @@
+@font-face {
+ font-family: PT Sans;
+ src: local("PT Sans");
+ src: url('../font/PTS55F.ttf') format("truetype");
+}
+
+@font-face {
+ font-family: PT Sans;
+ font-style: italic;
+ src: local("PT Sans");
+ src: url('../font/PTS56F.ttf') format("truetype");
+}
+
+@font-face {
+ font-family: PT Sans Bold;
+ font-style: bold;
+ src: local("PT Sans");
+ src: url('../font/PTS75F.ttf') format("truetype");
+}
+
+
+* {font-size: 14px;
+ font-family: 'PT Sans', Trebuchet MS, sans-serif;
+}
+
+strong {font-family: 'PT Sans Bold', Trebuchet MS, sans-serif;}
+
+ a {
+ /* Цвет подчёркивания */
+ color: #004bb7;
+
+ }
+
+ 
+ a:hover {
+ /* Цвет подчёркивания на ховере */
+ color: #bb0000;
+ }
+
+ 
+ a:visited {
+ /* Цвет подчёркивания посещенной */
+ color: #870087;
+
+ }
+
+ a:visited:hover {
+ /* Цвет подчёркивания на ховере посещенной*/
+ color: #bb0000;
+ }
+
+ 
+
+
+
+td {vertical-align: top;
+ }
+
+body {margin: 0px;
+ }
+ 
+td.side {width: 50%;
+}
+ 
+td.center {min-width: 180px;
+}
+
+td.sidepad {padding: 66px 0 0 0;
+}
+
+p.name {padding: 37px 0 20px 0;
+font-size: 46px;
+margin: 0px;
+} 
+ 
+p.name a {font-size: 46px;
+ text-decoration: none;
+ color: #000000;
+}
+
+p.supmenu {line-height: 16px;
+margin-bottom: 13px;
+}
+
+p.text {line-height: 20px;
+margin-right: 10px;
+}
+
+div.menu a {display: block;
+ padding-bottom: 4px;
+ }
+
+
+.selected {
+ margin: 0px;
+ font-style: italic;
+ padding-bottom: 4px;
+
+}
+
+td.header {font-size: 46px; 
+ padding: 60px 20px 30px 0;
+}
+
+
+td.picture {background: url(../img/Panorama1.jpg);
+ background-position: right;
+ background-repeat: no-repeat;
+}
+
+td.picture1 {background: url(../img/Panorama5.jpg);
+ background-position: left;
+ background-repeat: no-repeat;
+}
+ td.footer {padding-bottom: 15px; padding-top: 30px;
+ }
+
+div.border img
+{border: 1px solid #cccccc;
+display: block;
+margin-bottom: 5px;
+ }
+
+div.border {margin-top: 5px}
+
+div.reportlink {margin-top: 50px}

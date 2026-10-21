@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>window.RufflePlayer = {config: {autoplay: "on", unmuteOverlay: "hidden", splashScreen: false}};</script><script src="../ruffle/ruffle.js"></script>
+ <title>Интерактивная инфографика — Прототип</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <script type="text/javascript" src="../js/code.js"></script>
+<script type="text/javascript" src="../js/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="../script/swfobject.js"></script>
+
+ <meta http-equiv="Content-Script-Type" content="text/javascript">
+ <link rel="stylesheet" type="text/css" href="../css/nfrjtdjnbvz_style_css.css">
+ <link rel="stylesheet" type="text/css" href="../css/nfrjtdjnbvz_hm_css.css">
+
+</head>
+<body onload = "everything()">
+ <table cellspacing="0" cellpadding="0" border="0">
+ <tr>
+ <td class="side"></td>
+ <td class="center"></td>
+ <td class="center"></td>
+ <td class="center"></td>
+ <td class="center"></td>
+ <td class="center"></td>
+ <td class="center"></td>
+ <td class="side"></td>
+ </tr>
+ <tr>
+ <td></td>
+ <td class="sidepad">
+ <a href="../about.html">Дизайн-студия</a> <td colspan="2"><p class="name">nfrjtdjnbvz<span style="font-size: 26px; vertical-align: top">.name</span></p></td>
+ <td></td>
+ <td></td>
+ <td class="sidepad"><a href="http://nfrjtdjnbvz.livejournal.com">Блог</a></td>
+ </tr>
+ <tr>
+ <td></td>
+ <td></td> 
+ <td><p class="supmenu">Многополосные<br>издания</p>
+ <div class="menu">
+ <a href="../p_concept.html">Панорама</a> <a href="../vo_about.html">Вестник Олимпиады</a>
+ <a href="../mdi_cover.html">Мебельный журнал</a>
+ <a href="../m_about.html">МедиаЮг</a>
+ <a href="../justcat.html">Я, Юстас</a> </div>
+
+ </td>
+
+ <td><p class="supmenu">Фирменный<br>стиль</p>
+ <div class="menu">
+ <a href="../el_idea.html">Элемент</a>
+ <a href="../cf_style.html">Цветоформа</a>
+ <a href="../ci_guide.html">Центр-инвест</a>
+ <a href="../minicult.html">Миникульт</a>
+ <a href="../gazoblock.html">Газоблок</a> <a href="http://behance.net/nfrjtdjnbvz/frame" style="font-size:12px">Ещё логотипы</a>
+ </div>
+ </td>
+
+ <td><p class="supmenu">Придумать<br>заголовок</p>
+ <div class="menu">
+ <p class="selected">HomeMoney</p>
+ 
+ <a href="../soloway.html">Соловей</a> <a href="../butusov.html">Диск Бутусова</a> <a href="../art_about_mortality.html">Art About Mortality</a>
+ </div>
+ </td>
+
+ <td><p class="supmenu">Консультации<br>и тренинги</p>
+ <div class="menu">
+ <a href="../prd_idea.html">Практика реального дизайна</a>
+ <a href="../informa.html">Встреча в Информе</a>
+ <a href="../tchkh.html">Лекция про «Т.Ч.Х.»</a>
+ <a href="../webstroy.html">Встреча в Вебстрое</a> </div>
+ </td>
+ <td></td>
+ </tr> 
+
+ 
+ <tr>
+ <td class="header"></td>
+ <td></td>
+ <td class="header" colspan="4">Интерактивная инфографика</td>
+ <td></td>
+ </tr>
+<tr>
+ <td></td>
+ <td></td> 
+ <td class="razdel"><a href="../hm_about.html">Описание проекта</a></td>
+ <td class="razdel"><p class="selected">Прототип</p></td> 
+
+</tr>
+<tr>
+<td></td>
+<td colspan="7">
+<div style="position:relative; padding-top:50px">
+
+ <div class="content">
+
+ <div id="leftside">
+ <div id="title">
+ <a class="brokenLink" style="text-decoration: underline">Доходы</a>
+ <span>Расходы</span>
+ <a class="brokenLink" style="text-decoration: underline">Доходы и расходы</a>
+ </div>
+ <div id="informer"><img src="../img/cross.gif" style="float: right; margin-right: -25px; cursor: pointer" obj="informer" class="closebtn">
+ </div> 
+ <div id="hint1" class="hint" style="top: 550px; left: 378px; width: 135px;">
+ <img src="../img/cross.gif" style="float: right; margin-right: 0px; cursor: pointer" obj="hint1" class="closebtn">
+ &larr;&nbsp;Можно по-разному выводить список расходов</div>
+ <div id="hint2" class="hint" style="top: 487px; left: 75px; width: 130px;">
+ <img src="../img/cross.gif" style="float: right; margin-right: 0px; cursor: pointer" obj="hint2" class="closebtn">
+ Можно выбрать один или несколько месяцев</div>
+ <div id="hint3" class="hint" style="top: 503px; left: 674px; width: 121px;">
+ <img src="../img/cross.gif" style="float: right; margin-right: 0px; cursor: pointer" obj="hint3" class="closebtn">
+ Можно отключать и&nbsp;включать категории &rarr;</div>
+ <div id="accounts">
+ <form id="accs">
+ </form>
+ </div>
+ <div id="graph"></div>
+ <div id="months"></div>
+ <div id="switchers"></div>
+ <div id="table">
+ </div>
+ </div>
+ <div id="rightside">
+ <form id="cats" style="padding-top: 20px">
+ </form>
+ </div>
+ </div>
+</div>
+
+</td>
+</tr>
+
+ <tr>
+ <td></td>
+ <td class="footer">
+ </td>
+ <td></td>
+ <td class="footer">© Е. Арутюнов, 2007—2011<br><a href="mailto: gjxnf@nfrjtdjnbvz.name"><u>gjxnf@nfrjtdjnbvz.name</u></a></td>
+ <td></td>
+ <td></td>
+ <td class="footer" style="text-align: right">
+ </td>
+ <td></td>
+ </tr>
+
+
+ </table>
+
+</body>
+</html>

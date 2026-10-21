@@ -1,0 +1,19 @@
+<allElements>
+<onLoadMotionInit>
+	<empty />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element1" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element2" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element3" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element4" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element5" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element6" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element7" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element8" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element9" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element10" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element11" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element12" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element13" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+	<element forced="yes" hand="no" hup="no" contName="logoClip" insName="element14" nAct="35" fAct="25" nXF="12" nYF="6" fXF="1500" fYF="60" rF="14" />
+</onLoadMotionInit>
+</allElements>

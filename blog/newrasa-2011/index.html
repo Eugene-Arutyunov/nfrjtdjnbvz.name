@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Новая РАСА</title>
+<style>
+	html, body {height: 100%; margin: 0; overflow: hidden; background: #ffffff;}
+	#flashcontent, #flashcontent ruffle-player {width: 100%; height: 100%; display: block;}
+</style>
+</head>
+<body>
+<div id="flashcontent"></div>
+
+<script src="offline-data.js"></script>
+<script>
+// Browsers refuse fetch() on file://, so Ruffle cannot load the movie, its XML,
+// its pictures or its own .wasm when the page is opened from disk.
+// Everything is kept in window.__offline as base64 and served from memory instead.
+(function () {
+	var base = new URL('.', location.href).href;
+	var realFetch = window.fetch.bind(window);
+	var types = {swf: 'application/x-shockwave-flash', xml: 'text/xml', jpg: 'image/jpeg', wasm: 'application/wasm'};
+
+	function bytes(b64) {
+		var bin = atob(b64), arr = new Uint8Array(bin.length);
+		for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+		return arr;
+	}
+
+	// The .wasm is big, so its base64 lives in a separate script loaded on demand
+	function loadScript(src) {
+		return new Promise(function (resolve, reject) {
+			var s = document.createElement('script');
+			s.src = src;
+			s.onload = resolve;
+			s.onerror = function () { reject(new TypeError('Failed to load ' + src)); };
+			document.head.appendChild(s);
+		});
+	}
+
+	window.fetch = function (input, init) {
+		var href = new URL(typeof input === 'string' ? input : (input.url || input.href || String(input)), document.baseURI).href;
+		var key = href.indexOf(base) === 0 ? decodeURIComponent(href.slice(base.length).split(/[?#]/)[0]) : null;
+		if (key === null) return realFetch(input, init);
+
+		var ready = Promise.resolve();
+		if (!(key in window.__offline) && /^ruffle\/.*\.wasm$/.test(key)) ready = loadScript(key + '.js');
+
+		return ready.then(function () {
+			if (!(key in window.__offline)) return new Response('', {status: 404, statusText: 'Not Found'});
+			var response = new Response(bytes(window.__offline[key]), {
+				status: 200,
+				headers: {'Content-Type': types[key.split('.').pop().toLowerCase()] || 'application/octet-stream'}
+			});
+			// Ruffle resolves the movie's relative paths against the response URL
+			Object.defineProperty(response, 'url', {value: href});
+			return response;
+		});
+	};
+})();
+
+window.RufflePlayer = {config: {autoplay: 'on', unmuteOverlay: 'hidden', splashScreen: false}};
+</script>
+<script src="ruffle/ruffle.js"></script>
+<script>
+	var player = window.RufflePlayer.newest().createPlayer();
+	document.getElementById('flashcontent').appendChild(player);
+	// The live site generated this XML from its database; here it is a saved copy.
+	// Menu links led to pages of newrasa.ru, so they point at its archived copy.
+	var archive = 'https://web.archive.org/web/2011/http://www.newrasa.ru';
+	player.load({
+		url: 'newrasa.swf',
+		backgroundColor: '#ffffff',
+		quality: 'high',
+		parameters: {
+			mainXMLName: 'photo_xml.xml',
+			link1URL: archive + '/about.aspx',
+			link2URL: archive + '/old_portfolio.aspx',
+			link3URL: archive + '/blog',
+			link4URL: archive + '/default.aspx'
+		}
+	});
+</script>
+</body>
+</html>

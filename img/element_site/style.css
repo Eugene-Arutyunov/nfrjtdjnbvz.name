@@ -1,0 +1,5 @@
+html, body {margin: 0px; padding: 0px; height: 100%; overflow: hidden;} /**/ 
+#flashcontent {height: 100%; margin: 0px;}
+div.ph {margin: 50px; padding-bottom: 20px; font-family: Verdana;}
+div.ph a {color: #00A0E9;}
+div.ph h1 {color: #E7007E;}

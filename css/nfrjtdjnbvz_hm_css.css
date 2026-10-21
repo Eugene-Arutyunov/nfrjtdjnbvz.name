@@ -1,0 +1,194 @@
+@font-face {
+ font-family: PT Sans Bold;
+ font-style: bold;
+ src: local("PT Sans");
+ src: url('../font/PTS75F.ttf') format("truetype");
+}
+
+body {background: #ddd;
+}
+ 
+div.content {padding: 20px;
+ background: white;
+ margin: 0px 50px 50px 50px;
+ width: 990px;
+}
+
+#leftside {width: 700px;
+}
+
+#rightside {position: absolute;
+ left: 820px;
+ top: 500px;
+}
+
+#accounts {position: absolute;
+ top: 70px;
+ left: 824px;
+ 
+}
+
+
+ 
+#months {height: 100px;
+ margin-top:0px;
+} 
+
+.month {position: absolute;
+ padding-top: 2px;
+}
+
+.plate {position: absolute;
+ margin-top: 1px;
+ padding-top: 3px;
+ padding-left: 3px;
+ font-size: 13px;
+ height: 20px;
+ -moz-user-select: none;
+ -khtml-user-select: none;
+ user-select: none; 
+}
+
+
+
+.mname, .msum {font-size: 12px;
+}
+
+#msg {margin-left: 100px;
+}
+ 
+.msg {font-size:10px
+}
+
+
+#table {padding:20px 50px 20px 0px;
+}
+
+.rdate {font-size: 12px;
+ padding-right: 10px;
+ padding-left: 5px;
+}
+
+.racc {font-size: 14px;
+ padding-right: 10px;
+}
+
+.rcat {font-size: 14px;
+ padding-right: 10px;
+}
+
+
+.rcomm {font-style: italic;
+ font-size: 14px;
+ padding-right: 0px;
+}
+
+
+.rsum {font-family: PT Sans;
+ text-align: right;
+ padding-right: 10px;
+}
+
+.tsum {font-family: PT Sans Bold;
+ text-align: right;
+ padding: 5px 10px 3px 0px;
+}
+
+.tsum span {font-family: PT Sans Bold;
+ border-top: 1px solid #000;
+ font-size: 17px;
+}
+
+
+.bubble {position: absolute;
+ color: #000;
+ padding: 0px 5px 3px 5px;
+ font-size: 13px;
+ line-height: 125%;
+ 
+}
+
+#graph {width: 500px;
+ height: 305px;
+}
+
+.bar {position: absolute;
+ background: #fff;
+ height: 10px;
+ top: 100px;
+ left: 100px;
+}
+
+.bar span {font-size: 11px;
+ padding-left: 3px;
+}
+
+
+#ssum {position: absolute;
+ height: 20px;
+ width: 140px;
+ top:483px;
+ font-size: 17px;
+ padding-left: 2px;
+ font-family: PT Sans Bold;
+ text-align: right;
+}
+
+div.tableheader {
+ width: auto;
+ margin-top: 2px;
+ padding: 2px 0px 5px 5px;
+}
+
+div.tableheader, div.tableheader span {font-size: 17px;
+}
+
+div.highlight {
+ width: auto;
+}
+
+#title {padding-bottom: 60px;
+}
+
+#title a {
+ padding: 5px;
+}
+#title span {background: #e5e5e0;
+ padding: 5px;
+}
+
+#switchers {padding-left: 5px
+}
+
+#switchers span.selected {background: #e5e5e0;
+ padding: 5px;
+}
+ 
+#switchers a {
+ color: #000;
+ text-decoration: none;
+ border-bottom: 1px dotted #000;
+
+}
+
+
+#informer {
+ left: 370px;
+ top: 64px;
+ width: 370px;
+ position: absolute;
+ border: 1px solid #ddd;
+ padding: 5px 30px 5px 9px;
+ -moz-border-radius: 6px;
+ -webkit-border-radius: 6px;
+
+}
+
+.hint {position: absolute;
+ border: 1px solid #ddd;
+ padding: 5px 7px 5px 7px;
+ -moz-border-radius: 6px;
+ -webkit-border-radius: 6px;
+ background: #ffd;
+ font-size: 11px;
+}
