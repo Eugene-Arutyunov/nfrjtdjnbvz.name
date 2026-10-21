@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>window.RufflePlayer = {config: {autoplay: "on", unmuteOverlay: "hidden", splashScreen: false}};</script><script src="../ruffle/ruffle.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Флешка — nfrjtdjnbvz.name</title>
+<style>
+	@font-face {font-family: "PT Sans"; src: url("../font/PTS55F.ttf") format("truetype");}
+	html, body {margin: 0; background: #ffffff; color: #000000;}
+	body {font: 14px/1.5 "PT Sans", "Trebuchet MS", sans-serif;}
+	a {color: #0645ad;}
+	header {display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: baseline; padding: 20px 24px 16px;}
+	header h1 {margin: 0; font-size: 22px; font-weight: normal;}
+	header .meta {color: #888888;}
+	main {display: flex; justify-content: center; padding: 0 16px 40px;}
+	#stage {position: relative; box-shadow: 0 0 0 1px #eeeeee;}
+	#stage ruffle-player {display: block; width: 100%; height: 100%;}
+	#missing {padding: 40px 24px;}
+
+	/* bare mode: just the movie, used to take thumbnails */
+	body.bare header {display: none;}
+	body.bare main {padding: 0; justify-content: flex-start;}
+	body.bare #stage {box-shadow: none;}
+</style>
+</head>
+<body>
+<header>
+	<a href="index.html">← Все отдельные флешки</a>
+	<h1 id="title"></h1>
+	<span class="meta" id="meta"></span>
+</header>
+<main><div id="stage"></div></main>
+
+<script>
+// view.html#swf=blog/eating.swf&w=400&h=335  (swf is relative to the site root)
+(function () {
+	var params = new URLSearchParams(location.hash.slice(1));
+	var swf = params.get('swf');
+	var w = +params.get('w') || 550, h = +params.get('h') || 400;
+	var stage = document.getElementById('stage');
+
+	if (!swf || /^[a-z]+:|^\/|\.\./i.test(swf)) {
+		stage.outerHTML = '<p id="missing">Не указан файл. <a href="index.html">К списку</a></p>';
+		return;
+	}
+	if (params.has('bare')) document.body.classList.add('bare');
+
+	document.title = swf.split('/').pop() + ' — nfrjtdjnbvz.name';
+	document.getElementById('title').textContent = swf;
+	document.getElementById('meta').innerHTML = w + '&times;' + h + ' &middot; <a href="../' + swf + '" download>скачать .swf</a>';
+
+	// native size, scaled down when the window is smaller
+	function fit() {
+		var bare = document.body.classList.contains('bare');
+		var maxW = bare ? w : Math.max(200, window.innerWidth - 32);
+		var maxH = bare ? h : Math.max(150, window.innerHeight - 100);
+		var k = Math.min(1, maxW / w, maxH / h);
+		stage.style.width = Math.round(w * k) + 'px';
+		stage.style.height = Math.round(h * k) + 'px';
+	}
+	fit();
+	window.addEventListener('resize', fit);
+
+	var player = window.RufflePlayer.newest().createPlayer();
+	stage.appendChild(player);
+	player.load({url: '../' + swf, autoplay: 'on', unmuteOverlay: 'hidden', splashScreen: false, letterbox: 'on'});
+})();
+</script>
+</body>
+</html>
